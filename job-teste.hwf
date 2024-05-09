@@ -31,7 +31,7 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>Pipeline</name>
+      <name>move-to-leakhouse.hpl</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -41,11 +41,13 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
+      <filename>C:\workspace\hop\config\projects\job-teste\transformations\move-to-leakhouse.hpl</filename>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -55,7 +57,7 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>Pipeline 2</name>
+      <name>move-to-datawarehouse.hpl</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -65,11 +67,15 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
+      <filename>C:\workspace\hop\config\projects\job-teste\transformations\move-to-datawarehouse.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -92,20 +98,20 @@
   <hops>
     <hop>
       <from>Start</from>
-      <to>Pipeline</to>
+      <to>move-to-leakhouse.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Pipeline</from>
-      <to>Pipeline 2</to>
+      <from>move-to-leakhouse.hpl</from>
+      <to>move-to-datawarehouse.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Pipeline 2</from>
+      <from>move-to-datawarehouse.hpl</from>
       <to>Success</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
