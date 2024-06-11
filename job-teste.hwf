@@ -41,7 +41,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>C:\workspace\hop\config\projects\job-teste\transformations\move-to-leakhouse.hpl</filename>
+      <filename>${HOP_HOME_PROJECTS}\job-teste\transformations\move-to-leakhouse.hpl</filename>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -67,9 +67,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>C:\workspace\hop\config\projects\job-teste\transformations\move-to-datawarehouse.hpl</filename>
-      <logext/>
-      <logfile/>
+      <filename>${HOP_HOME_PROJECTS}\job-teste\transformations\move-to-datawarehouse.hpl</filename>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -80,8 +78,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>528</xloc>
-      <yloc>48</yloc>
+      <xloc>576</xloc>
+      <yloc>240</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -106,12 +104,19 @@
     <hop>
       <from>move-to-leakhouse.hpl</from>
       <to>move-to-datawarehouse.hpl</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>move-to-datawarehouse.hpl</from>
+      <to>Success</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>move-to-leakhouse.hpl</from>
       <to>Success</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
