@@ -112,8 +112,8 @@
       <from>move-to-datawarehouse.hpl</from>
       <to>Success</to>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
     </hop>
     <hop>
       <from>move-to-leakhouse.hpl</from>
