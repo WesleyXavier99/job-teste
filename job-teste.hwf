@@ -41,7 +41,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${HOP_HOME_PROJECTS}\job-teste\transformations\move-to-leakhouse.hpl</filename>
+      <filename>${HOP_HOME_PROJECTS}/job-teste/transformations/move-to-leakhouse.hpl</filename>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -67,7 +67,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${HOP_HOME_PROJECTS}\job-teste\transformations\move-to-datawarehouse.hpl</filename>
+      <filename>${HOP_HOME_PROJECTS}/job-teste/transformations/move-to-datawarehouse.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
